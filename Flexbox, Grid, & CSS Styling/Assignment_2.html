@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timetable</title>
+<style>
+    h1{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-align: center;
+        font-weight: 400;
+    }
+    {
+        text-align: center;
+        font-family: cursive;
+    }
+    .table {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr); 
+        gap: 10px;
+        width: 80%;
+        margin: auto;
+        border-radius: 25px;
+    }
+    .cell {
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 25px;
+    }
+    .pink {
+        padding: 15px;
+        border-radius: 25px;
+        background-color: #ffd6ef;
+    }
+    .time {
+        padding: 15px;
+        border-radius: 25px;
+        background-color: #bceef2;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+
+    .note {
+        padding: 5px;
+        border-radius: 25px;
+        background-color: #bceef2;
+        font-weight: bolder;
+        font-size: 20px;
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+        text-align: start;
+    }
+
+    #day{
+        padding: 15px;
+        border-radius: 25px;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+
+    .peach {
+        background-color: #faecaa;
+        padding: 15px;
+        border-radius: 25px;
+    }
+
+    
+</style>
+</head>
+<body>
+    <h1>Weekly Schedules</h1>
+
+    <div class="table">
+        <!-- Week days row -->
+        <div class="first-cell"></div>
+        <div class="pink" id="day">Monday</div>
+        <div class="peach" id="day">Tuesday</div>
+        <div class="pink" id="day">Wednesday</div>
+        <div class="peach" id="day">Thursday</div>
+        <div class="pink" id="day">Friday</div>
+
+        <!-- Time column -->
+        <div class="time">08:00</div>
+        <div class="pink">Maths</div>
+        <div class="peach">Science</div>
+        <div class="pink">English</div>
+        <div class="peach">Social Studies</div>
+        <div class="pink">Art</div>
+
+        <div class="time">09:00</div>
+        <div class="pink">Science</div>
+        <div class="peach">Maths</div>
+        <div class="pink">English</div>
+        <div class="peach">Social Studies</div>
+        <div class="pink">Music</div>
+        
+        <div class="time">10:00</div>
+        <div class="pink">English</div>
+        <div class="peach">Art</div>
+        <div class="pink">Maths</div>
+        <div class="peach">Science</div>
+        <div class="pink">PT</div>
+
+        <div class="time">11:00</div>
+        <div class="pink">Social Studies</div>
+        <div class="peach">Music</div>
+        <div class="pink">English</div>
+        <div class="peach">Maths</div>
+        <div class="pink">Science</div>
+
+        <div class="time">12:00</div>
+        <div class="pink">Lunch Break</div>
+        <div class="peach">Lunch Break</div>
+        <div class="pink">Lunch Break</div>
+        <div class="peach">Lunch Break</div>
+        <div class="pink">Lunch Break</div>
+
+        <div class="time">13:00</div>
+        <div class="pink">Art</div>
+        <div class="peach">PT</div>
+        <div class="pink">Social Studies</div>
+        <div class="peach">English</div>
+        <div class="pink">Maths</div>
+        
+        <div class="time">14:00</div>
+        <div class="pink">Music</div>
+        <div class="peach">PT</div>
+        <div class="pink">Science</div>
+        <div class="peach">Art</div>
+        <div class="pink">Social Studies</div>
+
+        <div class="time">15:00</div>
+        <div class="pink">PT</div>
+        <div class="peach">Music</div>
+        <div class="pink">Maths</div>
+        <div class="peach">Art</div>
+        <div class="pink">Science</div>
+
+        <div class="time">16:00</div>
+        <div class="pink">Music</div>
+        <div class="peach">Science</div>
+        <div class="pink">PT</div>
+        <div class="peach">Art</div>
+        <div class="pink">Maths</div>
+    
+    </div>
+    <div class="note">Note:</div>
+</body>
+</html>
