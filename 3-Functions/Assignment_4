@@ -1,0 +1,13 @@
+
+// Problem 4: Write a function to check if the char is a small case or not.
+function isLowerCase(char) {
+    // Check if the character is a lowercase letter using ASCII values
+    // ASCII values for lowercase letters are from 97 ('a') to 122 ('z')
+    return char >= 'a' && char <= 'z';
+}
+
+// Example usage:
+console.log(isLowerCase('a')); // Output: true
+console.log(isLowerCase('B')); // Output: false
+console.log(isLowerCase('1')); // Output: false
+}

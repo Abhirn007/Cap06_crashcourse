@@ -1,0 +1,10 @@
+// Problem 2: Use the above function to print the Primes from 2 to a given limit
+
+
+function printPrimesUpTo(limit) {
+    for (let i = 2; i <= limit; i++) {
+        if (isPrime(i)) {
+            console.log(i);
+        }
+    }
+}

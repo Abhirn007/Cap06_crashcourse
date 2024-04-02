@@ -1,0 +1,9 @@
+// Problem 5: Write a function to replace spaces in a given string with 
+function replaceSpacesWithHyphens(str) {
+    // Use the replace() method with a regular expression to replace spaces with hyphens
+    return str.replace(/ /g, "-");
+}
+
+// Example usage:
+// cnst inputString = "This is a test string";
+// console.log(replaceSpacesWithHyphens(inputString)); // Output: "This-is-a-test-string"
