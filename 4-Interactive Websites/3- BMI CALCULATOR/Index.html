@@ -1,0 +1,47 @@
+
+
+<!-- 
+This JavaScript code adds an event listener to the image with the ID "scamImage". When the image is clicked, it triggers a confirmation dialog with the specified message. If the user clicks "OK", the browser is redirected to the specified URL.
+
+User
+Create an application which calculates BMI (Body Mass Index)
+Your app should have 2 input boxes
+Take weight in kgs from user
+Take height in meters from user
+Based on entered height and weight calculate BMI of that person
+Here is the formula for manually calculating BMI  BMI = (weight) / (height * height)
+From the obtained BMI result, display whether the person is
+UnderWeight - bmi <= 18.4
+Normal Weight - bmi >= 18.5 && bmi <= 24.9
+Overweight - bmi >= 25 && bmi <= 29.9
+Obese - bmi >= 30
+Hint: use If conditions -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI Calculator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  input {
+    margin-bottom: 10px;
+  }
+</style>
+<!-- <script src="App.js"></script> -->
+</head>
+<body>
+  <h2>BMI Calculator</h2>
+  <label for="weight">Enter your weight (in kg):</label><br>
+  <input type="number" id="weight" step="0.01"><br>
+  <label for="height">Enter your height (in meters):</label><br>
+  <input type="number" id="height" step="0.01"><br>
+  <button onclick="calculateBMI()">Calculate BMI</button><br>
+  <p id="result"></p>
+</body>
+<script src="script.js"></script> 
+</html>
