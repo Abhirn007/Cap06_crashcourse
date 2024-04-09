@@ -1,26 +1,54 @@
 
 <!-- Sign Up Page -->
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <script src="app.js" defer></script>
+    <title>Masai Employee Records</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Sign Up</h1>
-    <form id="signupForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required><br>
-        <label for="role">Role:</label>
-        <select id="role" required>
+    <h1>Masai Employee Records</h1>
+    <form id="employeeForm">
+        <!-- Input fields for employee data -->
+        <!-- Name, Employee ID, Department, Experience, Email, Mobile -->
+        <!-- Select tag for Department -->
+        <input type="text" id="name" placeholder="Name" required><br>
+        <input type="text" id="empId" placeholder="Employee ID" required><br>
+        <select id="department" required>
+            <option value="frontend">Frontend</option>
+            <option value="backend">Backend</option>
+            <option value="Ops">Ops</option>
             <option value="HR">HR</option>
-            <option value="Employee">Employee</option>
+            <option value="IA">IA</option>
         </select><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" required><br>
-        <button type="submit">Sign Up</button>
+        <input type="number" id="experience" placeholder="Experience in years" required><br>
+        <input type="email" id="email" placeholder="Email" required><br>
+        <input type="tel" id="mobile" placeholder="Mobile Number" required><br>
+        <button type="submit">Submit</button>
     </form>
+    
+    <!-- Table to display employee records -->
+    <table id="employeeTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Employee ID</th>
+                <th>Department</th>
+                <th>Experience (years)</th>
+                <th>Email</th>
+                <th>Mobile Number</th>
+                <th>Role</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table body will be populated dynamically -->
+        </tbody>
+    </table>
+
+    <script src="record.js"></script>
 </body>
 </html>
