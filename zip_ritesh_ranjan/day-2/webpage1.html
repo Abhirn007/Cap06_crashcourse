@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar-container{
+            width: 100%;
+            background-color: teal;
+            padding: 20px 0px;
+            display: flex;
+            justify-content: space-evenly;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+        }
+        .navbar-container>button{
+            background-color: tomato;
+            color: white;
+            border: none;
+            padding: 5px 8px;
+            font-size: 17px;
+            border-radius: 10px;
+        }
+        /* .navbar-container>button:hover{
+            background-color: aqua;
+        } */
+        .navbar-container>button:active{
+            background-color: rgb(162, 73, 58);
+            padding: 6px 9px;
+        }
+        .content-container{
+            display: grid;
+            width: 80%;
+            /* border: 2px solid midnightblue; */
+            grid-template-columns: repeat(4 , 1fr);
+            gap: 40px;
+           
+            margin: auto;
+            margin-top: 100px;
+        }
+        .content-container>div{
+            /* border: 1px solid black; */
+            text-align: center;
+            box-shadow: 10px 5px 5px gainsboro;
+        }
+        .content-container>div>img{
+            width: 80%;
+        }
+
+        @media all and (max-width : 900px) and (min-width:550px){
+            .content-container{
+                grid-template-columns: repeat(3 , 1fr);
+            }
+            .navbar-container{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap:40px
+            }
+        }
+        @media all and (max-width:549px) and (min-width:0px){
+            .content-container{
+                grid-template-columns: repeat(2,1fr);
+            }
+            .navbar-container{
+                flex-wrap: wrap;
+            }
+            .navbar-container{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap:40px
+            }
+        }
+        .navbar-container>button>a{
+            text-decoration: none ;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar-container">
+         <button><a href="flex.html">Press me</a></button>
+         <button>Press me</button>
+         <button>Press me</button>
+         <button>Press me</button>
+         <button>Press me</button>
+         <button>Press me</button>
+
+    </div>
+
+    <div class="content-container">
+         
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+        <div>
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70" >
+            <p><b>Title :</b> Mobile Phone</p>
+            <p><b>Price : </b> 25000</p>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<!-- gap=20px
+400px => 100%  =>  25% 25% 25% 25%
+
+400px => 1fr   => 1fr 1fr 1fr 1fr
+320px => 1fr   => 1fr 1fr 1fr 1fr
+
+400/1 -->

@@ -1,0 +1,53 @@
+large screen => 1000px - 1900px
+
+med screen => 600px - 1000px
+
+small screen => 300px - 600px
+
+
+- pseudo-class =>  : 
+
+- pseudo-elements => ::
+
+
+- git clone url
+
+- go in that folder => cd 
+
+- git add .
+- git commit -m "your custom message"
+- git push origin main
+
+
+
+- level of elements => 2 => inline and block
+
+- inline => width and height => not respected
+
+- display : flex ; => one dimensional
+
+- flex - direction : row | column
+
+- justify-content : 
+
+- align-items;
+
+- flex-wrap:wrap | no-wrap
+
+
+
+- display : grid : => two dimensional
+
+- grid-template-columns : repeat(4 , 1fr )
+- grid-template-rows
+- gap:40px  
+  20 20px
+
+
+- @media  all  and (max-width) and (min-width){
+
+}  
+
+- pseudo-class =>  :
+
+- pseudo-elements => ::

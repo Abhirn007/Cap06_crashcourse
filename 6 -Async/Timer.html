@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TIMER</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #283618;
+        }
+
+        .container {
+            width: 400px;
+            border: 1px solid black;
+            background: black;
+        }
+
+        #timer {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            font-size: 22px;
+            padding-top: 8px;
+        }
+
+        .insidecontainer {
+            width: 100%;
+            height: 180px;
+            background-color: white;
+            margin-top: 6px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .inputAll {
+            width: 30%;
+            height: 30px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #283618;
+            font-family: 'Poppins', sans-serif;
+            padding-left: 28px;
+            font-size: 26px;
+        }
+
+        .inputAll::placeholder {
+            color: #283618;
+            font-size: 16px !important;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .allButtons {
+            width: 100%;
+            height: 72px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .button {
+            padding: 6px 16px;
+            margin-left: 16px;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+
+        #start {
+            background-color: green;
+        }
+
+        #pause {
+            background-color: blue;
+        }
+
+        #reset {
+            background-color: red;
+        }
+
+        @media all and (min-width:350px) and (max-width:460px) {
+            .container {
+                width: 300px;
+                border: 1px solid black;
+                background: black;
+            }
+
+            .inputAll::placeholder {
+                color: #283618;
+                font-size: 13px !important;
+            }
+
+            .button {
+                padding: 4px 12px;
+                margin-left: 12px;
+            }
+        }
+
+        @media all and (min-width:280px) and (max-width:349px) {
+            .container {
+                width: 250px;
+                border: 1px solid black;
+                background: black;
+            }
+
+            .inputAll::placeholder {
+                color: #283618;
+                font-size: 10px !important;
+            }
+
+            .inputAll {
+                width: 25%;
+                padding-left: 15px;
+                font-size: 22px;
+            }
+            .button {
+                padding: 3px 10px;
+                margin-left: 08px;
+                font-size: 11px;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p id="timer">Timer</p>
+        <div class="insidecontainer">
+            <input type="number" id="hour" class="inputAll" placeholder="Hour">
+            <input type="number" id="minute" class="inputAll" placeholder="Minutes">
+            <input type="number" id="second" class="inputAll" placeholder="Second">
+        </div>
+
+        <div class="allButtons">
+            <button id="start" class="button" onclick="start()">Start</button>
+            <button id="pause" class="button" onclick="pause()">Pause</button>
+            <button id="reset" class="button" onclick="reset()">Reset</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    let hour = document.getElementById("hour");
+    let minute = document.getElementById("minute");
+    let second = document.getElementById("second");
+    let effectTimer = document.getElementById("timer");
+    let total = 0;
+    let interval = null;
+
+
+    function start() {
+        clearInterval(interval);
+        interval = setInterval("mainTimer()", 1000);
+        effectTimer.innerText = "Timer Started";
+
+    }
+
+
+    function pause() {
+        clearInterval(interval);
+
+    }
+
+    function reset() {
+        clearInterval(interval);
+        hour.value = "00";
+        minute.value = "00";
+        second.value = "00";
+        effectTimer.innerText = "Timer";
+    }
+
+
+    function mainTimer() {
+        total = Number(hour.value) * 3600 + Number(minute.value) * 60 + Number(second.value);
+        total--;
+        if (total >= 0) {
+            let hr = Math.floor(total / 3600);
+            let mt = Math.floor((total / 60) - (hr * 60));
+            let sc = total - ((hr * 3600) + (mt * 60));
+            if (hr < 10) {
+                hour.value = "0" + hr;
+            }
+            else {
+                hour.value = hr;
+            }
+            if (mt < 10) {
+                minute.value = "0" + mt;
+            }
+            else {
+                minute.value = mt;
+            }
+            if (sc < 10) {
+                second.value = "0" + sc;
+            }
+            else {
+                second.value = sc;
+            }
+
+            if (total == 0) {
+                effectTimer.innerText = "Timer Over !!";
+                clearInterval(interval);
+            }
+        }
+    }
+
+
+</script>

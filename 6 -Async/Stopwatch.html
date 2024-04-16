@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS STOPWATCH</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 700px;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #023047;
+        }
+
+        .time {
+            text-align: center;
+
+        }
+
+        .button {
+            text-align: center;
+            padding-top: 36px;
+
+        }
+
+        .showletters {
+            color: white;
+            font-weight: bold;
+            font-size: 70px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .mainletter {
+            color: white;
+            font-weight: bold;
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .buttons {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 7px 14px;
+            color: white;
+            border: none;
+            outline: none;
+            margin-right: 24px;
+            cursor: pointer;
+        }
+
+        #start {
+            background-color: green;
+        }
+
+        #stop {
+            background-color: blue;
+        }
+
+        #reset {
+            background-color: red;
+        }
+
+        @media all and (min-width:280px) and (max-width:500px) {
+            .showletters {
+                font-size: 40px;
+            }
+
+            .mainletter {
+                font-size: 15px;
+            }
+
+            .buttons {
+                font-size: 10px;
+                padding: 5px 10px;
+                margin-right: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="time">
+            <span class="showletters" id="hour">00</span>
+            <span class="mainletter">Hr</span>
+            <span class="showletters" id="minute">00</span>
+            <span class="mainletter">Min</span>
+            <span class="showletters" id="sec">00</span>
+            <span class="mainletter">Sec</span>
+            <span class="showletters" id="countis">00</span>
+        </div>
+
+        <div class="button">
+            <button class="buttons" id="start" onclick="start()">Start</button>
+            <button class="buttons" id="stop" onclick="stop()">Pause</button>
+            <button class="buttons" id="reset" onclick="reset()">Reset</button>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    let showHour = document.getElementById("hour");
+    let showMinute = document.getElementById("minute");
+    let showSec = document.getElementById("sec");
+    let showCount = document.getElementById("countis");
+    let hr = 0;
+    let min = 0;
+    let sec = 0;
+    let count = 0;
+    let timer = false;
+
+    function start() {
+        timer = true;
+        stopwatch();
+    }
+    function stop() {
+        timer = false;
+        stopwatch();
+    }
+    function reset() {
+        timer = false;
+        stopwatch();
+        hr = 0;
+        min = 0;
+        sec = 0;
+        count = 0;
+        showHour.innerText = "00";
+        showMinute.innerText = "00";
+        showSec.innerText = "00";
+        showCount.innerText = "00";
+    }
+
+    function stopwatch() {
+        if (timer == true) {
+            count = count + 1;
+
+            if (count == 100) {
+                count = 0;
+                sec = sec + 1;
+            }
+            if (sec == 60) {
+                sec = 0;
+                min = min + 1;
+            }
+            if (min == 60) {
+                min = 0;
+                sec = 0;
+                hr = hr + 1;
+            }
+            let hourShow = hr;
+            let minuteShow = min;
+            let secShow = sec;
+            let countShow = count;
+
+            if (hourShow < 10) {
+                hourShow = "0" + hourShow;
+            }
+            if (minuteShow < 10) {
+                minuteShow = "0" + minuteShow;
+            }
+            if (secShow < 10) {
+                secShow = "0" + secShow;
+            }
+            if (countShow < 10) {
+                countShow = "0" + countShow;
+            }
+
+
+            showHour.innerText = hourShow;
+            showMinute.innerText = minuteShow;
+            showSec.innerText = secShow;
+            showCount.innerText = countShow;
+            setTimeout("stopwatch()", 10);
+        }
+    }
+</script>

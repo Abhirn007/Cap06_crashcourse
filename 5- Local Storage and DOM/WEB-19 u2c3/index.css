@@ -5,13 +5,13 @@
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #685b5b;
     padding: 8px;
     text-align: left;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #7a7989;
 }
 
 tr:nth-child(even) {

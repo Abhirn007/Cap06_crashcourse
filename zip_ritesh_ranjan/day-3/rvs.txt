@@ -1,0 +1,14 @@
+var => datatype
+
+operators => math (+ , - , / , * , % , **) , comparison(< , > , <= , >= , ==)
+logical(&& , || , !)
+
+console.log(!(true || false))
+
+loop => while , for 
+
+if else
+
+functions => 
+
+== and ===

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    // objects , functions , object methods
+    
+    // let student1 = {
+    //     name : "name1",
+    //     id: "01",
+    //     subjects : ["eng" , "sst"],
+    //     greet : function (){
+    //         console.log("hi" , this.name)
+    //     }
+    // }
+
+    // let classroom = []
+
+    // classroom.push(student1)
+
+    // let student2 = {
+    //     name : "name2",
+    //     id: "02",
+    //     subjects : ["eng" , "sst" , "GK"]
+    // }
+
+    // classroom.push(student2)
+
+    // console.log(classroom[0].greet())
+    // let arr = []
+   
+    // function StudentData (nameValue , idValue , subValue){
+       
+    //     let obj = {
+    //         name : nameValue ,
+    //         id : idValue ,
+    //         subjects : subValue
+    //     }
+
+    //     arr.push(obj)
+      
+    //     return arr
+    // }
+
+    // console.log(StudentData("name1" , 1 , ["eng " , "maths"]))
+    // console.log(StudentData("virat"  , 2 , ["games" , "sst"]))
+   
+    
+    // for(let i = 0 ; i<arr.length ; i++){
+    //     console.log(arr[i].name)
+    // }
+
+
+    // let arr = [
+    //     [1,2,3],
+    //     [4,5,6],
+    //     [7,8,9]
+    // ]
+    // // [0,0]
+    // [0,1]
+    // [2,2]
+    // row => arr.length
+    // column => arr[i].length
+
+    // for(let i = 0 ; i<arr.length ; i++){
+    //     // console.log(arr[i])
+    //     // let individualArr = arr[i]
+
+    //     for(let j = 0 ; j<arr[i].length;j++){
+    //          console.log(arr[i][j])
+    //     }
+    // }
+
+    // i =0
+
+    // arr[0]
+
+    // j = 0 , 1 , 2
+
+    // arr[0][1] , arr[0,2] , arr[0][3]
+
+    // let arr = [
+    //     [1,2,3],
+    //     [4,5,6],
+    //     [7,8,9]
+    // ]
+
+    // // sum of all the element
+    
+    // for(let i = 0 ; i<arr.length ; i++){
+    //     let sum = 0
+    //     for(let j = 0 ; j<arr[i].length ; j++){
+    //         // console.log(arr[i][j])
+    //         sum += arr[i][j]
+    //     }
+    // }
+
+    // console.log(sum)
+
+    // functions 
+    // function expression
+    // function statement
+    // anonymous function
+    // callback function 
+    // Higher order function
+
+    // function add(a,b , func){
+    //     // a = 1
+    //     // b = 2
+    //     // func = sub =>  function (a,b){
+    // //     return a-b
+    // // }
+    //     return a+b
+    // }
+
+    // add(1,2 ,sub )
+
+    // let sub = function (a,b){
+    //     return a-b
+    // }
+
+    // function in javascript are first class citizens
+    // they can passed as an variable , and even can have methods
+
+
+
+    // function Calculator(num1 , num2 , kuchBhi){
+    //     // num1 = number
+    //     // num2 = number
+    //     // kuchBhi = function(){
+
+    //     //}
+    //     //  console.log(kuchBhi(num1 , num2))
+    //     let value = kuchBhi(num1 , num2)
+
+    //     return value
+    // }
+
+    // function add(a,b){
+    //     return a+b
+    // }
+
+    // function sub(a,b){
+    //     return a-b
+    // }
+
+    // console.log(Calculator(1 , 2 , add))
+    // console.log(Calculator(4,3,sub))
+
+// function add(a,b){
+//      return a+b
+// }
+
+// function sub(a,b){
+//   return a-b
+// }
+// function multiple(a,b){
+//   return a*b
+// }
+
+// function Parent(func , a , b){
+//   console.log(func(a,b))
+// }
+
+// Parent(add , 1 ,2)
+// callback
+// HOF 
+
+// function Parent(){
+// //    child() // callback
+
+//    return child
+// }
+
+// function child(){
+//     console.log("hi")
+// }
+
+// HOF => it either accepts another func as a parameter
+// or atleast returns another func 
+
+
+// console.log(Parent()()) //=> child
+
+// map  , forEach , filter , reduce , sort
+
+
+// let arr = [2,3,4,5,6,7]
+
+// let narr = arr.map(function(ele , i ){
+//     //   console.log(ele , i , arr)
+//     ele = ele*2
+
+//     return ele
+// })
+
+// console.log(narr)
+// console.log(arr)
+// map return new array
+
+// let narr = arr.forEach(function(ele, i , arr){
+// //    console.log(ele , i , arr)
+//       ele = ele*2
+
+//       return ele
+// })
+
+// // forEach => it always return undefined
+
+// console.log(narr)
+
+
+// 1. map return an array , whereas forEach return undefined(always)
+// 2. we can reuse update arr of map but we can't reuse updated array of forEach as it always returns undefined
+
+// title 
+// imgLink
+// descip
+
+// <div>
+
+// let arr = [2,3,4,5,6,7]
+
+// let narr = arr.filter(function(ele , i , arr){
+//     //  console.log(ele , i , arr)
+
+//     return ele==5
+// })
+
+// let narr = arr.map(function(ele,i,arr){
+//       if(ele%2 === 1){
+//         return ele
+//       }
+// })
+
+// console.log(narr)
+// console.log(arr)
+
+// let data = [
+//     {
+//         title : "shirt",
+//         price : 500
+//     },
+//     {
+//         title : "footwear",
+//         price : 2000
+//     },
+//     {
+//         title : "cap",
+//         price : 1500
+//     },
+//     {
+//         title : "trouser",
+//         price : 1000
+//     }
+   
+    
+// ]
+
+
+// let narr = data.filter(function(ele,i,arr){
+//     // console.log(ele.price)
+//     return (ele.price<=1500 || ele.title=="footwear")
+// })
+
+// console.log(narr)
+// console.log(data)
+
+// let arr = [3,2,7,4,6]
+
+// let narr = arr.sort(function(a,b){
+//     return b-a
+// })
+
+// console.log(narr)
+
+
+// let data = [
+//     {
+//         title : "shirt",
+//         price : 500
+//     },
+//     {
+//         title : "footwear",
+//         price : 2000
+//     },
+//     {
+//         title : "cap",
+//         price : 1500
+//     },
+//     {
+//         title : "trouser",
+//         price : 1000
+//     }
+   
+    
+// ]
+
+// let narr = data.sort(function(ele1 , ele2){
+//     // return  ele2.title - ele1.title
+//     // console.log(ele1.title)
+//     return ele2.title.localeCompare(ele1.title)
+// })
+
+// console.log(narr)
+
+
+// let arr = ["b" , "a" , "d" , "c"]
+
+// let narr = arr.sort()
+
+// console.log(narr)
+
+
+
+
+
+// let arr = [2,3,4,5,6,7,8]
+
+// let narr = arr.reduce(function(accumulator , currentValue){
+//     return accumulator + currentValue
+// } )
+
+// // 1 => 2 , 3
+// // 2 => 5 , 4
+// // 3 => 9 , 5
+
+// // 1 => 100 , 2
+// // 2 => 102 , 3
+
+// // reduce(cf , acc)
+
+// console.log(narr)
+
+
+
+
+// let data = [
+//     {
+//         title : "shirt",
+//         price : 500
+//     },
+//     {
+//         title : "footwear",
+//         price : 2000
+//     },
+//     {
+//         title : "cap",
+//         price : 1500
+//     },
+//     {
+//         title : "trouser",
+//         price : 1000
+//     }
+   
+    
+// ]
+
+// let value = data.reduce(function(acc , cur){
+//    return acc + cur.price
+// },0)
+
+// console.log(value)
+// // {} + 1
+
+// sir can we do like , if we want the sum of only which is above 5
+
+// map => []
+// filter => []
+// forEach => undefined
+// sort => []
+// reduce => value (a number)
+
+// method chaining
+
+let arr = [2,3,8,5]
+
+let narr = arr.filter(function(ele){
+    return ele%2===0
+}).reduce(function(acc,ele){
+    return acc+ele
+})
+
+
+// console.log(arr)
+let narr2 = arr.filter(function(ele){
+    return ele>5
+})
+
+narr2 = narr2.reduce(function(acc,curr){
+    return acc + curr
+})
+
+ console.log(narr)
+console.log(narr2)
+</script>
+</html>

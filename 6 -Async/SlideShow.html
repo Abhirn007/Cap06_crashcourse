@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLIDE SHOW</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #283618;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 600px;
+            /* height: 350px; */
+            /* border: 1px solid black; */
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .button {
+            padding: 6px 16px;
+            margin-left: 20px;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+
+        #start {
+            background-color: green;
+        }
+
+        #stop {
+            background-color: green;
+        }
+
+        #previous {
+            background-color: blue;
+        }
+
+        #next {
+            background-color: red;
+        }
+
+        .allButto {
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .visibility {
+            display: none;
+        }
+
+        @media all and (min-width:290px) and (max-width:420px) {
+            .button {
+            padding: 4px 10px;
+            margin-left: 14px;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<div class="container">
+    <img src="https://images.unsplash.com/photo-1700771266232-7a31af68eb31?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="">
+    <div class="allButto">
+        <button class="button" id="start">Start</button>
+        <button class="button visibility" id="stop">Stop</button>
+        <button class="button" id="previous">Previous</button>
+        <button class="button" id="next">Next</button>
+    </div>
+</div>
+
+</html>
+<script>
+
+
+    let allImages = ["https://images.unsplash.com/photo-1693253024090-1fc1e1821a5c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D", "https://images.unsplash.com/photo-1690567614925-eb1954507d87?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D", "https://images.unsplash.com/photo-1690394472903-23ce57cb5953?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D", "https://images.unsplash.com/photo-1688934150111-ab9a5d327087?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D", "https://images.unsplash.com/photo-1687898048784-a5599468c664?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D", "https://images.unsplash.com/photo-1692647452435-46e87dd58a01?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D", "https://images.unsplash.com/photo-1692553840136-c1ea062de842?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fHw%3D", "https://images.unsplash.com/photo-1687107714490-f08bbaa8b2de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8", "https://images.unsplash.com/photo-1687457099221-06f18ad00e55?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHx8", "https://images.unsplash.com/photo-1693662478385-5d75dde0538a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHx8", "https://images.unsplash.com/photo-1543836707-85c7c91203f6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw4ODEzODExfHxlbnwwfHx8fHw%3D", "https://images.unsplash.com/photo-1541961817716-44060761e345?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw4ODEzODExfHxlbnwwfHx8fHw%3D", "https://images.unsplash.com/photo-1547756536-cde3673fa2e5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8M3w4ODEzODExfHxlbnwwfHx8fHw%3D", "https://images.unsplash.com/photo-1682686581427-7c80ab60e3f3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Nnw4ODEzODExfHxlbnwwfHx8fHw%3D", "https://images.unsplash.com/photo-1682685794761-c8e7b2347702?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NXw4ODEzODExfHxlbnwwfHx8fHw%3D", "https://images.unsplash.com/photo-1476990789491-712b869b91a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NHw4ODEzODExfHxlbnwwfHx8fHw%3D", "https://images.unsplash.com/photo-1589642314445-999ac13b0075?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OXw4ODEzODExfHxlbnwwfHx8fHw%3D", "https://images.unsplash.com/photo-1682687218982-6c508299e107?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OHw4ODEzODExfHxlbnwwfHx8fHw%3D", "https://images.unsplash.com/photo-1483921020237-2ff51e8e4b22?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTJ8ODgxMzgxMXx8ZW58MHx8fHx8", "https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTl8ODgxMzgxMXx8ZW58MHx8fHx8"];
+
+    let start = document.getElementById("start");
+    let stop = document.getElementById("stop");
+    let previous = document.getElementById("previous");
+    let next = document.getElementById("next");
+    let image = document.querySelector("img");
+    let count = 0;
+    let interval = null;
+    let totalNoOfData = allImages.length;
+
+
+    start.addEventListener("click", () => {
+        clearInterval(interval);
+        start.classList.add("visibility");
+        stop.classList.remove("visibility");
+        interval = setInterval("changeImages()", 1500);
+    })
+    stop.addEventListener("click", () => {
+        start.classList.remove("visibility");
+        stop.classList.add("visibility");
+        clearInterval(interval);
+    })
+
+    function changeImages() {
+        if (count == totalNoOfData - 1) {
+            count = 0;
+            image.setAttribute("src", allImages[count]);
+        }
+
+        else {
+            count++;
+            image.setAttribute("src", allImages[count]);
+        }
+
+    }
+
+    previous.addEventListener("click", () => {
+        count--;
+        clearInterval(interval);
+        if (count < 0) {
+            count = 0;
+        }
+        image.setAttribute("src", allImages[count]);
+    })
+    next.addEventListener("click", () => {
+        count++;
+        clearInterval(interval);
+        if (count == totalNoOfData) {
+            count = totalNoOfData - 1;
+        }
+        image.setAttribute("src", allImages[count]);
+    })
+
+</script>

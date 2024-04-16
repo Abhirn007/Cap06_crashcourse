@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #givenId{
+            color:red;
+        }
+        #container{
+            width: 60%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+        #container>div{
+            box-shadow: 1px 1px 2px 4px gainsboro;
+            text-align: center;
+        }
+        #container>div>img{
+            width: 70%;
+            height: 150px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        
+    </div>
+    
+</body>
+<script>
+
+//   let obj =   {
+//   title : "Mobile 64Ram",
+//   description : "16 GB RAM | 64 MP Camera",
+//   img : "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70",
+//   price : 48999
+// }
+
+let Products = [
+
+{
+  title : "Mobile",
+  description : "16 GB RAM | 64 MP Camera",
+  img : "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/g/d/1/-original-imagz6tzjgggzygu.jpeg?q=70",
+  price : 48999
+},
+{
+  title : "Refrigerator",
+  description : "4 Star | Instant ICE",
+  img : "https://rukminim2.flixcart.com/image/312/312/xif0q/refrigerator-new/y/d/k/-original-imagwnkacu6rgagg.jpeg?q=70",
+  price : 80000
+},
+{
+  title : "Laptop",
+  description : "32 GB RAM | RTX 3060",
+  img : "https://rukminim2.flixcart.com/image/312/312/xif0q/computer/f/o/t/-original-imaguyhz7cyftguh.jpeg?q=70",
+  price : 90599
+},
+{
+  title : "Television",
+  description : "32 inch LED Display",
+  img : "https://rukminim2.flixcart.com/image/312/312/xif0q/television/r/8/t/-original-imagzmeygvkvmzah.jpeg?q=70",
+  price : 48999
+},
+{
+  title : "Shoes",
+  description : "Running support | Memory Foam",
+  img : "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/w/j/7/-original-imagyrahgtfzwxbg.jpeg?q=70",
+  price : 3999
+},
+{
+  title : "Watch",
+  description : "Stainless steel build",
+  img : "https://rukminim2.flixcart.com/image/612/612/xif0q/watch/s/a/8/-original-imagpzjfpydjvh6k.jpeg?q=70",
+  price : 8999
+},
+{
+  title : "Air Conditioner",
+  description : "5 star , instant cooling",
+  img : "https://rukminim2.flixcart.com/image/312/312/xif0q/air-conditioner-new/0/x/u/-original-imagxuycz3jynfzn.jpeg?q=70",
+  price : 62999
+},
+{
+  title : "Television",
+  description : "32 inch LED Display",
+  img : "https://rukminim2.flixcart.com/image/312/312/xif0q/television/r/8/t/-original-imagzmeygvkvmzah.jpeg?q=70",
+  price : 48999
+},
+{
+  title : "Shoes",
+  description : "Running support | Memory Foam",
+  img : "https://rukminim2.flixcart.com/image/612/612/xif0q/shoe/w/j/7/-original-imagyrahgtfzwxbg.jpeg?q=70",
+  price : 3999
+},
+{
+  title : "Watch",
+  description : "Stainless steel build",
+  img : "https://rukminim2.flixcart.com/image/612/612/xif0q/watch/s/a/8/-original-imagpzjfpydjvh6k.jpeg?q=70",
+  price : 8999
+},
+{
+  title : "Air Conditioner",
+  description : "5 star , instant cooling",
+  img : "https://rukminim2.flixcart.com/image/312/312/xif0q/air-conditioner-new/0/x/u/-original-imagxuycz3jynfzn.jpeg?q=70",
+  price : 62999
+},
+]
+
+let container = document.querySelector("#container")
+
+Products.forEach(function(ele,i ){
+
+let separateDiv = document.createElement("div")   
+
+let title = document.createElement("h3")
+title.innerHTML = ele.title
+
+let img = document.createElement("img")
+img.src = ele.img
+
+let desc = document.createElement("p")
+// desc.setAttribute("id" , "desc")
+desc.id = "desc"
+desc.innerText = ele.description
+
+let price = document.createElement("p")
+price.innerText = ele.price
+
+separateDiv.append(img,title , desc , price)
+container.append(separateDiv)
+})
+
+Products.forEach(function(ele){
+    console.log(ele.title)
+})
+
+
+</script>
+</html>

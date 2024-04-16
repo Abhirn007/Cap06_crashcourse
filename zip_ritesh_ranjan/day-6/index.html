@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container">
+        <h2>Learning DOM</h2>
+    </div>
+
+    <div id="container2">
+        <h2>Learning DOM twice</h2>
+    </div>
+
+    <img id="container-img">
+    
+
+    <button onclick="greet()">Change text</button>
+    <button onclick="imgUpdate()">Update IMG</button>
+    
+</body>
+ 
+
+<script>
+   let container = document.getElementById("container")
+   let container2 = document.getElementById("container2")
+   let img  = document.getElementById("container-img")
+
+   console.log(container)
+   console.log(container2)
+
+   function greet(){
+       container.innerHTML = "<h2>Hi there !!</h2>"
+       container.style.color = "red"
+    //    let a = 10
+    // let one = container.innerHTML
+    // let two = container.innerText
+    // let three = container.textContent
+    // console.log(one)
+    // console.log(two)
+    // console.log(three)
+    // innerHTML , innerText , textContent
+    // console.log("hello")
+   }
+
+   function imgUpdate(){
+    // console.log(img)
+    // console.log(a)
+    img.src = "https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/x/0/4/-original-imagxaqu3samghjd.jpeg?q=70"
+   }
+
+   // event => click , filling an input , selecting a tag 
+</script>
+
+</html>

@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Learning Combinators</title>
+
+        <style>
+            /* .container h2{
+                color:red;
+            } */
+            /* .container p{
+                color:blue;
+            } */
+            /* .container>h2{
+                color:violet;
+            }
+            .container>div>p{
+                color:yellowgreen;
+            }
+            .container>div>div>p{
+                color:teal;
+            } */
+            /* .container>div>h2~p{
+                color:gold;
+            } */
+            /* .container>div>h2+p{
+                color:tomato;
+                SICTU => 1000 > 100 > 10 > 1 > 0
+                10 + 1 + 1 = 12
+            } */
+            .container>div>p{
+                color:blue;
+            }
+            .p2{
+                color:red;
+            }
+
+            .container>h2 , p{
+                color:blue;
+            }
+           
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <h2 >heading2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <div>
+                <h2>heading - 2</h2>
+                <p class="p2">Lorem ipsum dolor sit amet.</p>
+                <div>
+                    <h2>heading -- 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+        </div>
+    </body>
+</html>

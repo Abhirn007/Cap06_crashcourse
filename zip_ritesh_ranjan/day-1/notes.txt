@@ -1,0 +1,31 @@
+- html is gonna be collection of elements or tags
+
+- every html tags are gonna have attributes , attributes=""
+
+- inline style > id > class > tag  > universal
+
+- 1000         > 100 > 10   > 1 > 0
+
+- SICTU => style id class tag universal
+
+- Combinators => descendent   child    general sibling   adjacent sibling
+
+   container>div>h2
+
+  <div class=container>
+
+  <p></p>
+  <p></p>
+
+  <div>
+    <h2></h2>
+  </div>
+  
+  </div>
+
+
+  - .container > #one > div > h2            10   100 1 1  => 112
+
+  - #one > #two > #three > .container > div > h2   100 + 100 + 100 + 10 + 1 + 1 
+
+  - every element in html is fundamentally a box : margin , padding , border , content

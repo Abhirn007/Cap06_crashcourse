@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    // console.log("hello world")
+
+    // //varibles = values (datatype)
+
+    // var num1 = 25;
+
+    // var num2 ;
+
+    // num2 = 46
+    // num2 = 50;
+    // num2 = "25"
+
+    // // value && datatype
+
+    // console.log(num2 === num1)
+
+    // && , || , !
+
+     //console.log(1 && 0 && true)
+
+     // console.log(!(1 || false || 0))
+
+     // datatype => string , number , boolean , array , obj
+
+    //  function greet(name){
+    //     console.log("hi there !!" , name)
+    //  }
+
+    // greet("virat")
+    // greet("kohli")
+
+    // // we have a data structure array
+    // var arr = [2,3,10,12,4 , 17]
+
+    // // only wanna return the elements which are at even position
+
+    // function doubleIt(anArr){
+
+    //     for(var i = 0 ; i < anArr.length ; i++){
+    //         if(i%2==0){
+    //             anArr[i] = anArr[i]*2
+    //         }
+              
+    //     }
+
+    //     // console.log(anArr)
+
+    //     return anArr
+    // }
+
+    // var doubleVariable  = doubleIt(arr)
+
+    // console.log(doubleIt([2,3,4]))
+
+    // console.log(doubleVariable)
+
+    // for(var i = 0 ; i<doubleVariable.length ; i++){
+    //     console.log(doubleVariable[i])
+    // }
+    
+
+    // function statement => function name (){}
+    // function expression 
+
+    // var nameMyFunction = function (){
+    //     return "hi"
+    // }
+
+    // anonymous
+    // function (){
+
+    // }
+    // console.log(nameMyFunction())
+
+    // function add(a,b,str){
+    //     // a = 1
+    //     // b = 2
+    //     // str = 
+    //     // undefined
+    //    console.log(a ,b , str)
+    // }
+
+    // add(1,2)
+
+    // let name ;
+    // console.log(name)
+    // name = "ritesh"
+
+
+    // {
+    //     var name = 14
+
+    //     console.log(name)
+    // }
+    // console.log(name)
+
+    // {
+    //     let nameTwo = 15
+    //     nameTwo = 20
+    //     console.log(nameTwo)
+    // }
+
+    // {
+    //     const nameThree = 20
+    //     nameThree = 25
+
+        
+    // }
+
+    // console.log(nameTwo)
+    // console.log(nameThree)
+    // let arr = ["name1" , "name2" , "name3"]
+
+    // let obj = {
+    //     // name = value
+    //     name : "virat" ,
+    //     lastName : "kohli" , 
+    //     noOfMatchs : 121
+    // }
+
+    // // let studentDetails = [
+    // //     {
+    // //         name : "stud1",
+    // //         id  : 1
+    // //     } ,
+    // //     {
+    // //         name : "stud2",
+    // //         id  : 2
+    // //     }
+    // // ]
+
+    // let sq = obj["name"]
+    // let dot = obj.name
+    // console.log(sq)
+    // console.log(dot)
+
+
+    // let obj = {
+    //     // name = value
+    //     name : "virat" ,
+    //     lastName : "kohli" , 
+    //     noOfMatchs : 121,
+    //     // name : "rohit"
+    // }
+
+    // // obj.name = "masai"
+    // obj.locationPlayed = ["wankhade" , "eden garden"]
+
+    // // console.log(obj)
+    // console.log(obj.locationPlayed[0])
+    // console.log(obj["name"])
+
+    // let nObj = {
+    //     a : 1 , 
+    //     b : 2 ,
+    //     c : 3 , 
+    //     d : 4 ,
+    //     // any : "hi"
+    // }
+
+    // // for in
+
+    // for(let any in nObj){
+    //     //   console.log(any)
+    //    if(nObj[any] % 2 == 0){
+    //     console.log(any + ":" , nObj[any]) // nobj[any] => any = "a"
+    //    }
+    // }
+   
+   // sq notation => dynamic key access
+
+//    var firstName = "rohit"
+//    let lastName = "sharma"
+
+//    let obj = {
+
+//       firstName : "virat" , 
+//       lastName : "kohli" ,
+//       greet : function (){
+//         // console.log(this)
+//         // console.log("hi everyone" , this.firstName , this.lastName )
+//         console.log(this.firstName , this.lastName)
+        
+//       },
+//       newStr : function (){
+//         // add # at even position wale elements in firstName
+//         // "virat" => "#i#a#"
+//         let name = this.firstName
+//         let str = ""
+
+//         for(let i = 0 ; i<name.length ; i++){
+//             if(i%2 == 0 ){
+//                 str += "#"
+//             }else{
+//                 str += name[i]
+//             }
+//         }
+
+//         return str
+//       }
+       
+//    }
+
+//    obj.greet()
+
+//    console.log(obj.newStr())
+
+   // function which are keys of object , they are called methods
+
+   // everything in js is gonna be object fundamentally
+   // everything in js is wrapped inside an object
+
+//    let str = "virat" // "VIRAT"
+
+//    let nstr = str.toUpperCase()
+
+//    let str2 = "KOHLI"
+
+//    let nstr2 = str2.toLowerCase()
+
+//    console.log(nstr , nstr2)
+
+
+    // let sentence = "a q#uick br#own f#ox"
+
+    // // ["a" , "quick" , "brown"]
+
+    // let narr = sentence.split("")
+
+    // console.log(narr)
+
+    // let str = "a b c d e"
+
+    // let narr = str.split(" ")
+    // narr[2] = "f"
+
+    // narr = narr.join()
+
+    // console.log(narr)
+
+
+    // let arr = [1,2,3,4,5,6,7]
+
+    // arr.pop()
+    // arr.pop()
+    // arr.pop()
+
+    // // [1,2,3,4]
+    // arr.push(arr.length)
+    // // [1,2,3,4,4]
+
+    // console.log(arr)
+
+    // arr.pop()
+    // arr.push("hi")
+
+    // console.log(arr)
+
+    let str = " h i f a"
+
+    console.log(str.length)
+
+</script>    
+</html>
