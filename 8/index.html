@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <!-- <link rel="stylesheet" href="./styles/index.css"> -->
+  <style>
+    #navbar {
+      width: 100vw;
+      height: 40px;
+      display: flex;
+      /* background-color: blue; */
+      justify-content: space-around;
+      /* margin-top: 20px; */
+      position: fixed;
+      top: 0px;
+      background-color: white;
+    }
+
+    .gap {
+      margin-right: 14px;
+    }
+
+    #items {
+      /* width: 100vw; */
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .size {
+      width: 300px;
+    }
+
+    body {
+      /* overflow-x: hidden; */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar">
+    <div class="gap">login</div>
+    <div class="gap">Sign-Up</div>
+    <div class="gap">Items</div>
+    <div class="gap" id="go_to_cart"><a href="cart.html">Cart</a></div>
+    <div class="gap" id="item_count">0</div>
+
+    <!-- - Navbar should have cart link with Id :- “go_to_cart” -->
+    <!-- - Count div Id :- “item_count” -->
+    <!-- item_count should contain only number do not add any extra text -->
+  </div>
+
+  <div id="items">
+    <!-- - Append the items inside div with Id : “items”
+      - Item card will have class : "item"
+      - Add to cart button with class :- “add_to_cart” -->
+
+    <!-- <div class="item">
+      <button class="add_to_cart">Add to Cart</button>
+    </div> -->
+
+
+  </div>
+</body>
+
+</html>
+<script src="src/scripts/index.js"></script>
