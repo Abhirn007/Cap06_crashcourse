@@ -1,23 +1,35 @@
-document.addEventListener("DOMContentLoaded", function() {
-    fetchTodos();
+let todoList = document.getElementById('todoList');
+
+fetch("https://jsonplaceholder.typicode.com/todos")
+.then(function(res){
+    return res.json();
+})
+.then(function(data){
+    // console.log(data)
+    showData(data)
+})
+.catch(function(error){
+    console,error("Error Fetching: ",error)
 });
 
-function fetchTodos() {
-    fetch('https://jsonplaceholder.typicode.com/todos')
-        .then(response => response.json())
-        .then(data => {
-            appendTodosToDOM(data);
-        })
-        .catch(error => {
-            console.error('Error fetching todos:', error);
-        });
-}
+function showData(todo){
+    todo.forEach(function(ele,i){
+        let todoItem = document.createElement('li');
 
-function appendTodosToDOM(todos) {
-    const todoList = document.getElementById('todo-list');
-    todos.forEach(todo => {
-        const listItem = document.createElement('li');
-        listItem.textContent = todo.title;
-        todoList.appendChild(listItem);
-    });
-}
+        const label = document.createElement('label');
+        label.textContent = ele.title;
+        
+        let checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.addEventListener('change', function() {
+            if (checkbox.checked) {
+                todoItem.classList.add('completed');
+            } else {
+                todoItem.classList.remove('completed');
+            }
+        }); 
+        
+        todoItem.append(label, checkbox)
+        todoList.append(todoItem)
+        })
+    }
