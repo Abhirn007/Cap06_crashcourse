@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  
+  #nav{
+      display: flex; 
+      justify-content: space-between;
+      padding: 20px;
+       align-items: center;
+       background-color: rgb(32, 31, 31);
+  }
+  
+  h1{
+      color: white;
+  }
+  
+  #root{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+      padding: 20px;
+      width: 98%;
+  }
+  #root>div{
+      
+       padding: 20px;
+      border: 1px solid;
+      border-radius:5px ;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+  #div-img{
+      height: 300px;
+      width: 200px;
+  }
+  
+  img{
+      height: 100%;
+      width: 100%;
+  }
