@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic List Rendering</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    function Gallery({ children }) {
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '1rem' }}>
+      {children}
+    </div>
+  );
+}
+
+// Example usage
+ReactDOM.render(
+  <Gallery>
+    <Image src="image1.jpg" />
+    <Image src="image2.jpg" />
+    {/* Additional images can be included as needed */}
+  </Gallery>,
+  document.getElementById('root')
+);
+
+  </script>
+</body>
+</html>
