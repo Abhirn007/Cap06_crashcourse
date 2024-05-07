@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic List Rendering</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    let rootElement = document.getElementById("root");
+    const fruits = ["Apple", "Banana", "Cherry"];
+
+    function ItemList ({list ,heading}){
+      return (
+      <div>
+        {list.length>0 ? (
+          <ul>
+            <h1>Fruits</h1>
+            {list.map(function(item){
+              return <li>{item}</li>
+            })}
+          </ul>
+        ):
+      (<p>No Item Found</p>)}
+      </div>
+    )}
+
+    function App(){
+      return ( 
+      <>
+        <ItemList list={fruits} heading="Fruits" />
+      </>
+    )}
+
+    ReactDOM.createRoot(rootElement).render(<App />)
+  </script>
+</body>
+</html>
